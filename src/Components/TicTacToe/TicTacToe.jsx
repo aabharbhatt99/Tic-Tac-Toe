@@ -25,10 +25,10 @@ export const TicTacToe = () => {
     if(lock){
         return 0;
     }
-    if(data[num] != ""){
+    if(data[num] !== ""){
       return 
     }
-    if(count%2==0){
+    if(count%2===0){
         e.target.innerHTML = `<img src='${cross_icon}'>`
         data[num] = "x";
         setCount(++count);
@@ -82,7 +82,7 @@ export const TicTacToe = () => {
     setLock(false);
     data = ["", "", "", "", "", "", "", "", ""];
     titleRef.current.innerHTML = "Tic Tac Toe Game In <span>React</span>"
-    box_array.map((e) => {
+    box_array.forEach((e) => {
         e.current.innerHTML = ""
     })
   }
